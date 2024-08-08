@@ -1,0 +1,9 @@
+<!-- src/app/documento/documento.component.html -->
+<p-fileUpload name="demo[]" url="./upload" (onUpload)="onUpload($event)" multiple="multiple" accept="image/*" maxFileSize="1000000">
+</p-fileUpload>
+
+<ul>
+  <li *ngFor="let documento of documentos">
+    {{ documento.nombre }} ({{ documento.tipo }})
+  </li>
+</ul>
